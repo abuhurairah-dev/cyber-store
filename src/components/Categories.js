@@ -13,7 +13,11 @@ import {
 const Wrap = styled.section`
   padding: 40px 48px;
   background: #fbfbfc;
-  height: 300px;
+
+  @media (max-width: 1024px) {
+    padding: 32px 32px;
+  }
+
   @media (max-width: 768px) {
     padding: 24px 16px;
   }
@@ -24,18 +28,32 @@ const Header = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 18px;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
 `;
 
 const Title = styled.h3`
   margin: 0;
-  font-size: 20px;
+  font-size: 22px;
   color: #111827;
   font-weight: 600;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const ButtonGroup = styled.div`
   display: flex;
   gap: 10px;
+
+  @media (max-width: 640px) {
+    align-self: flex-end;
+  }
 `;
 
 const ScrollBtn = styled.button`
@@ -68,7 +86,11 @@ const Row = styled.div`
   }
 
   justify-content: flex-start;
-  flex-wrap: nowrap; /* keeps horizontal scrolling */
+  flex-wrap: nowrap;
+
+  @media (max-width: 768px) {
+    gap: 12px;
+  }
 `;
 
 const Card = styled.div`
@@ -90,18 +112,48 @@ const Card = styled.div`
     transform: translateY(-4px);
     box-shadow: 0 8px 16px rgba(2, 6, 23, 0.08);
   }
+
+  @media (max-width: 1024px) {
+    min-width: 200px;
+  }
+
+  @media (max-width: 768px) {
+    min-width: 160px;
+    padding: 16px 12px;
+  }
+
+  @media (max-width: 480px) {
+    min-width: 140px;
+    padding: 14px 10px;
+  }
 `;
 
 const IconWrap = styled.div`
   background: #f3f4f6;
   padding: 12px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    padding: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
 `;
 
 const Label = styled.div`
   font-size: 14px;
   color: #111827;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 13px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+  }
 `;
 
 export default function Categories() {

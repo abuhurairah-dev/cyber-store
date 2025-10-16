@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 const Banner = styled.section`
   margin-top: 18px;
-  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80') 
-              no-repeat center center;
+  background: url('/background.jpeg') no-repeat center center;
   background-size: cover;
-  color: #fff;
+  color: #000000ff;
   padding: 48px;
   display: flex;
   flex-direction: column;
@@ -25,14 +24,14 @@ const Title = styled.h2`
 `;
 
 const Sub = styled.p`
-  color: #c7c4c9;
+  color: #111011ff;
   margin: 0 0 18px 0;
 `;
 
 const Button = styled.button`
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #121111ff;
+  border: 1px solid rgba(17, 17, 17, 0.18);
   padding: 10px 14px;
   border-radius: 8px;
   cursor: pointer;
