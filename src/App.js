@@ -1,24 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "styled-components";
+import { GlobalStyle } from "./globalStyles";
+import Navbar from "./components/Navbar";
+import Hero from "./components/Hero";
+import PromoGrid from "./components/PromoGrid";
+import Categories from "./components/Categories";
+import ProductsSection from "./components/ProductsSection";
+import PopularStrip from "./components/PopularStrip";
+import Discounts from "./components/Discounts";
+import SaleBanner from "./components/SaleBanner";
+import Footer from "./components/Footer";
+
+const AppWrap = styled.div`
+  width: 100%;
+  overflow-x: hidden;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppWrap>
+      <GlobalStyle />
+      <Navbar />
+      <Hero />
+      <PromoGrid />
+      <Categories />
+      <ProductsSection />
+      <PopularStrip />
+      <Discounts />
+      <SaleBanner />
+      <Footer />
+    </AppWrap>
   );
 }
 
